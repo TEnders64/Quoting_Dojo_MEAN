@@ -7,9 +7,13 @@
 		h1{
 			text-align: center;
 		}
+		.link{
+			text-align: right;
+		}
 	</style>
 </head>
 <body>
+	<h1 class="link"><a href="/">New Quote</a></h1>
 	<h1>Here are the awesome quotes!</h1>
 <% for (var i = 0; i < quotes.length; i++){ %>
 	<h5><a href="/quotes/<%= quotes[i]._id %>"><%= quotes[i].quote %></a></h5>
