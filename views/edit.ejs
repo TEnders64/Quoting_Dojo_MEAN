@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quote</title>
+	<style>
+		h1{
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="/">New Quote</a> | <a href="/quotes">All Quotes</a></h1>
+	<form action="/quotes/<%= quote._id %>" method="post">
+		<input type="text" value="<%= quote.quote %>" name="quote" />
+		<h5>Written by: <%= quote.name %></h5>
+		<p>Date written: <%= quote.date %></p>
+		<input type="submit" value="Update Quote" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quote</title>
+	<style>
+		h1{
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="/">New Quote</a> | <a href="/quotes">All Quotes</a></h1>
+	<h2><%= quote.quote %></h2>
+	<h5>Written by: <%= quote.name %></h5>
+	<p>Date written: <%= quote.date %></p>
+	<a href="/quotes/<%= quote._id %>/edit"><button>Edit</button></a>
+</body>
+</html>

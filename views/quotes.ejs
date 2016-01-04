@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quoting_Dojo Quotes</title>
+	<style>
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Here are the awesome quotes!</h1>
+<% for (var i = 0; i < quotes.length; i++){ %>
+	<h5><a href="/quotes/<%= quotes[i]._id %>"><%= quotes[i].quote %></a></h5>
+	<p><%= quotes[i].name %> wrote on <%= quotes[i].date %></p>
+	<a href="/quotes/<%= quotes[i]._id %>/destroy"><button>Delete Quote</button></a>
+	<hr>
+<% } %>
+</body>
+</html>
